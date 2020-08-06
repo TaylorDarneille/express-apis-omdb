@@ -22,7 +22,7 @@ We'll be creating an app that connects to [OMDB](http://www.omdbapi.com), a publ
   * HINT: What should you name your input field based on the query string above?
 2. Write your GET route for `/results`.
   * Use `req.query` to access query string parameters.
-  * Use the `axios` module to make a request to the OMDB API with this data. YOU WILL NEED TO INSTALL AND REQUIRE IT.
+  * Use the `request` module to make a request to the OMDB API with this data. YOU WILL NEED TO INSTALL AND REQUIRE IT.
   * Send the data back to the browser. Use `res.render` and use the provided `results.ejs` template.
 3. In the results from the API, we notice that in every movie entry
 there is a IMDBid. In the rendered HTML for `/results`, have each movie link
@@ -32,13 +32,7 @@ to a route like `/movies/tt234323` (where `tt234323` is the IMDBid for that movi
   * Render them on the provided `detail.ejs` page.
 
 ## Tips
-* Remember the axios syntax for a GET request:
-* ```js
-  axios.get('some url goes here')
-    .then(function (response) {
-      console.log(response);
-    })
-  ```
+Refer back to [these notes](https://tmdarneille.gitbook.io/sei-ga-sea/05-node-express/00readme-1/02apis)
 
 * The movie api returns an array of movies inside the `Search` Key.
 
